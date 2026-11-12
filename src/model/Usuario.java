@@ -17,8 +17,11 @@ public class Usuario {
           this.dataCadastro = LocalDate.now();
       }
 
+    public Usuario() {
+    }
 
-      // metodo GET
+
+    // metodo GET
       public String getNome(){
           return this.nome;
       }
