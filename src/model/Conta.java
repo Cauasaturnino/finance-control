@@ -71,6 +71,9 @@ public class Conta {
         return saldo;
     }
 
+
+
+
     // metodo depositar
     public void depositar(BigDecimal valor){
         if (valor.compareTo(BigDecimal.ZERO) <= 0){
@@ -83,10 +86,24 @@ public class Conta {
         System.out.println("Deposito realizado com sucesso ! ");
     }
 
+    public boolean sacar(BigDecimal valor) {
 
+        if (valor == null || valor.compareTo(BigDecimal.ZERO) <= 0) {
+            System.out.println("Valor de saque inválido!");
+            return false;
+        }
 
+        if (valor.compareTo(this.saldo) > 0) {
+            System.out.println("Saldo insuficiente!");
+            return false;
+        }
 
+        this.saldo = this.saldo.subtract(valor);
 
+        System.out.println("Saque realizado com sucesso!");
+
+        return true;
+    }
 
 
 }

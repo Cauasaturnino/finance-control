@@ -8,10 +8,10 @@ public class TesteConta {
                 "Centro",
                 "1234");
 
-        conta.depositar(new BigDecimal("400.00"));
-        conta.depositar(new BigDecimal("50.00"));
+        conta.depositar(new BigDecimal("500.00"));
+        conta.sacar(new BigDecimal("100.00"));
 
-        System.out.print(conta.getSaldo());
+        System.out.print("Saldo Atual: " +conta.getSaldo());
 
     }
 
